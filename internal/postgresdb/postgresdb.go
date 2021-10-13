@@ -1,11 +1,11 @@
-package postgres_connection
+package postgresdb
 
 import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
-var Db *gorm.DB
+var DB *gorm.DB
 var host string
 var db_name string 
 var username string 
@@ -28,7 +28,7 @@ func ConnectDB() *gorm.DB {
 
 	dsn := "host="+ host + " user=" + username + " password=" + password + " dbname=" + db_name + " port=" + db_port + " sslmode=disable  TimeZone=Asia/Jakarta"
 
-	Db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic(err)
 	}
@@ -37,6 +37,5 @@ func ConnectDB() *gorm.DB {
      // postgres, err := Db.DB()
      // defer postgres.Close()
 
-     return Db
-
+     return DB
 }
