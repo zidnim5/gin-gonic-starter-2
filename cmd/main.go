@@ -1,7 +1,7 @@
 package main
 
 import (
-	"grpc/httpd/routes"
+	"starter/cmd/routes"
 
 	"github.com/gin-gonic/gin"
 )
