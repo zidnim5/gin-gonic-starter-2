@@ -4,16 +4,35 @@
 
 > Gin is a web framework written in Go (Golang). It features a martini-like API with performance that is up to 40 times faster thanks to httprouter. If you need performance and good productivity, you will love Gin.
 
-## Unit Testing
 
-To get started with unit testing, run this command in terminal to run example unit testing :
+## Project Structure
 
-```sh
-go test ./test -v
+    .
+    ├── cmd                      # Source files (alternatively `lib` or `app`)
+    ├── internal                 # Internall service (alternatively `config`)
+    ├     └── postgresdb                
+    ├── pkg                      # Package files (include `unit_test`)
+    ├     └── todo                
+    ├── makefile
+    └── readme.md
+
+
+## Getting Started
+
+Simple way to getting started
+
+```ssh
+     git clone https://github.com/zidnim5/gin-gonic-starter-2.git
 ```
 
-You can spesific test to function with this command :
+```ssh
+     go mod init starter
+```
 
-```sh
-go test ./test -v -run TestAbs
+```ssh
+     go mod tidy
+```
+
+```ssh
+     make dev
 ```
