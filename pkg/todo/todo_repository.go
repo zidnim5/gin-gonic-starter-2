@@ -1,6 +1,7 @@
 package todo
 
-type TodoRepo interface{
-     FindId(id string) (err error)
-     Insert() (err error)
+// todo repository
+type TodoRepo interface {
+	FindId(id string) (err error)
+	Insert() (err error)
 }

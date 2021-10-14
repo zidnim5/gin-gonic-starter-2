@@ -6,7 +6,12 @@ import (
      "starter/pkg/todo"
 )
 
-func GetTodo (c *gin.Context) {
+/** 
+ * TODO: Find todo by id
+ * 
+ * @return JSON `see response c.JSON github.com/gin-gonic/gin`
+*/
+func FindTodo (c *gin.Context) {
      req := c.Request.URL.Query()
 
      // validation
@@ -30,8 +35,17 @@ func GetTodo (c *gin.Context) {
      })
 }
 
+/** 
+ * TODO: store todo
+ * 
+ * @param "name" string 
+ * 
+ * @return JSON `see response c.JSON github.com/gin-gonic/gin`
+*/
 func StoreTodo (c *gin.Context) {
      req := &todo.Todo{}
+
+     // validation
      if err := c.ShouldBindJSON(req); err != nil {
 		c.JSON(http.StatusUnprocessableEntity, "invalid json")
 		return
