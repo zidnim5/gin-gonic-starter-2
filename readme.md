@@ -10,9 +10,9 @@
     .
     ├── cmd                      # Source files (alternatively `lib` or `app`)
     ├── internal                 # Internall service (alternatively `config`)
-    ├     └── postgresdb                
+    |     └── postgresdb                
     ├── pkg                      # Package files (include `unit_test`)
-    ├     └── todo                
+    |     └── todo                
     ├── makefile
     └── readme.md
 
