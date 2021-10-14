@@ -36,3 +36,16 @@ Simple way to getting started
 ```ssh
      make dev
 ```
+
+
+## Unit Testing
+
+Simple way to run unit testing
+
+```ssh
+     go test ./pkg/todo -v -run TestUnit
+```
+
+```ssh
+     go test ./pkg/todo -v -run TestMocking
+```
